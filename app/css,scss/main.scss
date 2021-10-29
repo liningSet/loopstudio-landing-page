@@ -1,0 +1,39 @@
+@import "./vars";
+@import "./sections/header";
+@import "./sections/about";
+@import "./sections/projects";
+@import "./sections/footer";
+@import "./sections/burger";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $content;
+}
+
+h1,
+h2,
+h3 {
+  font-family: $headings;
+}
+
+img:not(.esp) {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: $Very-Dark-Gray;
+}
+
+.desk-img {
+  display: none;
+}

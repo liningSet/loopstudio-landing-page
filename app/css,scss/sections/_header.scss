@@ -1,0 +1,45 @@
+header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  > img {
+    //position: absolute;
+    //object-fit: cover;
+  }
+
+  .nav-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+  }
+
+  .hero-heading {
+    border: 2px solid $White;
+    position: absolute;
+    z-index: 1234;
+    color: $White;
+    padding: 1rem;
+    width: 80%;
+    max-width: 400px;
+  }
+}
+
+.navbar {
+  width: 90%;
+  .navlist {
+    .nav-item {
+      &:not(.burger-menu) {
+        display: none;
+      }
+    }
+  }
+}
