@@ -8,37 +8,139 @@ header {
   justify-content: center;
 
   > img {
-    //position: absolute;
-    //object-fit: cover;
+    min-width: 400px;
   }
 
   .nav-container {
-    position: absolute;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     top: 0;
     width: 100%;
     z-index: 99999;
+    transition: $tran2;
   }
 
-  .hero-heading {
-    border: 2px solid $White;
-    position: absolute;
-    z-index: 1234;
-    color: $White;
-    padding: 1rem;
+  .hero-heading-container {
     width: 80%;
-    max-width: 400px;
+    z-index: 1234;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    .hero-heading {
+      border: 2px solid $White;
+      color: $White;
+      padding: 1rem;
+      max-width: 450px;
+      width: 0;
+      overflow: hidden;
+
+      > * {
+        font-weight: 200;
+        overflow: hidden;
+      }
+    }
   }
 }
 
 .navbar {
-  width: 90%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.75rem 0;
   .navlist {
     .nav-item {
       &:not(.burger-menu) {
         display: none;
+      }
+    }
+
+    .burger-menu {
+      z-index: 999999999;
+    }
+  }
+}
+
+#logo {
+  width: 60%;
+  max-width: 10rem;
+  position: relative;
+  z-index: 9999999999;
+}
+
+#active-nav {
+  background: $White;
+  box-shadow: 0 1px 1em rgba(32, 32, 32, 0.25);
+  position: fixed;
+
+  #logo {
+    filter: invert(100%);
+  }
+
+  .navbar {
+    $changed: #000;
+    $buttonColor: $changed;
+    padding: 1.75rem 0;
+    .navlist {
+      .nav-item {
+        &:not(.burger-menu) {
+          &::after {
+            background: $changed;
+          }
+        }
+
+        a {
+          color: $changed;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  header {
+    background: rgba(27, 27, 27, 0.25);
+
+    > img {
+      min-width: 1500px;
+      mix-blend-mode: multiply;
+    }
+
+    .navbar {
+      padding: 2.5rem 0;
+      .navlist {
+        display: flex;
+        gap: 3vw;
+        .nav-item {
+          &:not(.burger-menu) {
+            display: block;
+
+            &::after {
+              @include nav-hover(2px);
+            }
+
+            &:hover::after {
+              width: 100%;
+            }
+          }
+          &.burger-menu {
+            display: none;
+          }
+
+          a {
+            color: $White;
+          }
+        }
+      }
+    }
+
+    .hero-heading-container {
+      justify-content: flex-start;
+
+      .hero-heading {
+        padding: 2rem;
       }
     }
   }

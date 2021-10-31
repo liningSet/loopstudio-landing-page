@@ -1,9 +1,11 @@
 @import "./vars";
+@import "./mixins";
 @import "./sections/header";
 @import "./sections/about";
 @import "./sections/projects";
 @import "./sections/footer";
 @import "./sections/burger";
+@import "./sections/mobile-menu";
 
 * {
   margin: 0;
@@ -16,6 +18,19 @@ h1,
 h2,
 h3 {
   font-family: $headings;
+}
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
 }
 
 img:not(.esp) {
@@ -32,8 +47,47 @@ a {
 
 p {
   color: $Very-Dark-Gray;
+  line-height: 1.5;
 }
 
 .desk-img {
   display: none;
+}
+
+@media (min-width: 800px) {
+  html {
+    font-size: 15px;
+  }
+  .desk-img {
+    display: block;
+  }
+  .mob-img {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  .about.about,
+  .projects.projects,
+  footer {
+    > * {
+      width: 80%;
+    }
+  }
+}
+
+@media (min-width: 1070px) {
+  h1 {
+    font-size: 3.25rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
 }

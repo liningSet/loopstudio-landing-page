@@ -1,6 +1,6 @@
 $buttonWidth: 30px;
 $buttonHeight: 20px;
-$buttonColor: $White; //hsl(220, 13%, 13%)
+$buttonColor: $White;
 $lineThickness: 2px;
 $transitionSpeed: 0.25s;
 $transitionEasing: ease-in-out;
@@ -40,12 +40,7 @@ $transitionEasing: ease-in-out;
   }
 }
 
-button:hover {
-  color: lighten($buttonColor, 15%);
-}
-
 button.is-active {
-  $buttonColor: hsl(220, 13%, 13%);
   border-color: transparent;
 
   &:before {
@@ -61,4 +56,10 @@ button {
   border: none;
   cursor: pointer;
   outline: none;
+}
+
+#active-nav {
+  .menu-toggle {
+    color: #000;
+  }
 }

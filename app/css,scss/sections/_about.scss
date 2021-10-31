@@ -1,0 +1,57 @@
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 4rem 0;
+
+  .about-container {
+    width: 80%;
+    position: relative;
+  }
+}
+
+.about-text {
+  text-align: center;
+
+  h2 {
+    margin: 2rem 0 1rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .about {
+    padding: 8rem 0;
+  }
+
+  .about-container {
+    .desk-img {
+      width: 70%;
+    }
+  }
+
+  .about-text {
+    width: 50%;
+    position: absolute;
+    bottom: -6em;
+    right: 0;
+    padding: 2rem;
+    background: $White;
+    text-align: left;
+
+    h2 {
+      margin: 0 0 1rem;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .about-container {
+    .desk-img {
+      width: 60%;
+    }
+  }
+  .about-text {
+    padding: 4rem 0 4rem 4rem;
+  }
+}

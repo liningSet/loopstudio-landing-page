@@ -1,4 +1,3 @@
-
 //colors
 
 $White: hsl(0, 0%, 100%);
@@ -6,8 +5,12 @@ $Black: hsl(0, 0%, 0%);
 $Dark-Gray: hsl(0, 0%, 55%);
 $Very-Dark-Gray: hsl(0, 0%, 41%);
 
-
 //fonts
 
-$content: 'Alata', sans-serif;
-$headings: 'Josefin Sans', sans-serif;
+$content: "Alata", sans-serif;
+$headings: "Josefin Sans", sans-serif;
+
+//transitions
+
+$tran: all 0.75s ease-out;
+$tran2: all 0.3s ease;

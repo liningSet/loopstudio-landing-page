@@ -1,0 +1,19 @@
+@mixin btn {
+  border: 1px solid $Black;
+  padding: 0.5em 1.25em;
+  color: $Black;
+  transition: $tran2;
+  background: none;
+  font-size: 1rem;
+  letter-spacing: 5px;
+}
+
+@mixin nav-hover($thickness) {
+  content: "";
+  display: block;
+  width: 0;
+  margin: 2px auto 0;
+  height: $thickness;
+  background: $White;
+  transition: $tran2;
+}
